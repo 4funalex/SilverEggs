@@ -1,6 +1,7 @@
 package com.funalex.silvereggs.util;
 
 import com.funalex.silvereggs.registry.ItemRegistry;
+import java.security.SecureRandom;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.mob.CreeperEntity;
@@ -20,7 +21,7 @@ import net.minecraft.world.explosion.Explosion;
 import java.util.Random;
 
 public final class EffectUtil {
-    private static final Random random = new Random();
+    private static final Random random = new SecureRandom();
 
     public static void explosiveEffect(World world, HitResult hitResult) {
         final int chargedCreepers = random.nextInt(1) + 1;
